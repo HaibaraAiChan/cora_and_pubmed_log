@@ -108,6 +108,7 @@ def parse_time_results(filename: str, args):
 			if line.startswith("block generation total time"):
 				block_gen_times.append(float(line.split(' ')[-1]))
 			if line.startswith("average batch blocks generation time:"):
+				# print(line)
 				batch_gen_times.append(float(line.split(' ')[-1]))
 
 			
@@ -354,12 +355,12 @@ def main():
 		help="the dataset name we want to collect")
 	argparser.add_argument('--model', type=str, default='sage')
 	argparser.add_argument('--aggre', type=str, default='mean')
-	argparser.add_argument('--num-layers', type=int, default=3)
+	argparser.add_argument('--num-layers', type=int, default=4)
 	argparser.add_argument('--hidden', type=int, default=16)
 	argparser.add_argument('--log-indent', type=int, default=1)
 	# argparser.add_argument('--aggre', type=str, default='lstm')
-	argparser.add_argument('--selection-method', type=str, default='random')
-	# argparser.add_argument('--selection-method', type=str, default='range')
+	# argparser.add_argument('--selection-method', type=str, default='random')
+	argparser.add_argument('--selection-method', type=str, default='range')
 	argparser.add_argument('--eval',type=bool, default=False)
 	argparser.add_argument('--epoch-ComputeEfficiency', type=bool, default=False)
 	argparser.add_argument('--epoch-PureTrainComputeEfficiency', type=bool, default=True)
@@ -433,10 +434,20 @@ def clear(infile):
 	flag=True
 	f = open(infile,'r')
 	lst = []
+	prev=''
 	for line in f:
-		if 'pytorch' in line or line.startswith('Using backend: pytorch'):
-			line = line.replace('Using backend: pytorch',' ')
+		if  line.startswith('Using backend: pytorch') or 'pytorch' in line:
+			line = line.replace('Using backend: pytorch','')
 			flag=True
+		# elif 'pytorch' in line:
+		# 	line = line.replace('Using backend: pytorch','')
+		# 	prev = line
+		# 	line = '\n'
+		# 	flag=True
+		# if prev != '':
+		# 	line += prev
+		# 	flag=True
+		# 	prev=''
 		lst.append(line)
 	f.close()
 	if len(lst) == 0:

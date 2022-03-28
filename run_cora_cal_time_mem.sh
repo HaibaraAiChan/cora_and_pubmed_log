@@ -11,20 +11,22 @@ aggreList=(mean lstm)
 pMethodList=(random range)
 eval=False
 
+mkdir res/
+mkdir res/${file}
+mkdir res/${file}/${model}
 for aggre in ${aggreList[@]}
 do      
-        
-        mkdir ${file}/${model}/res/${aggre}/
+        mkdir res/${file}/${model}/${aggre}/
         for pMethod in ${pMethodList[@]}
         do
-                mkdir ${file}/${model}/res/${aggre}/${pMethod}
+                mkdir res/${file}/${model}/${aggre}/${pMethod}
                 for layers in ${layersList[@]}
                 do
-                        mkdir ${file}/${model}/res/${aggre}/${pMethod}/layers_${layers}       
+                        mkdir res/${file}/${model}/${aggre}/${pMethod}/layers_${layers}       
                         for hidden in ${hiddenList[@]}
                         do      
-                                mkdir ${file}/${model}/res/${aggre}/${pMethod}/layers_${layers}/h_${hidden} 
-                                resPath=${file}/${model}/res/${aggre}/${pMethod}/layers_${layers}/h_${hidden}
+                                mkdir res/${file}/${model}/${aggre}/${pMethod}/layers_${layers}/h_${hidden} 
+                                resPath=res/${file}/${model}/${aggre}/${pMethod}/layers_${layers}/h_${hidden}
                                 
                                 python calculate_time_mem.py \
                                 --aggre $aggre \
