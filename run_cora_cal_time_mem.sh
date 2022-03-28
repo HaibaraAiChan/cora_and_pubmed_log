@@ -43,10 +43,19 @@ do
                                 --num-layers $layers \
                                 --save-path ${resPath}/${file}_${model}_eval_${eval}_pseudo_ \
                                 > ${resPath}/${file}_${model}_eval_${eval}_eff.log
+                                
+                                
+                                
                         done
                 done
         done
 done
+python num_file_check.py \
+        --filepath res/ \
+        > error.log
+        
+        
+        
 # model=sage
 # file=arxiv
 # aggre=mean
