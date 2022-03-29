@@ -52,7 +52,7 @@ do
 done
 python num_file_check.py \
         --filepath res/ \
-        > error.log
+        > pubmed_error.log
         
         
         

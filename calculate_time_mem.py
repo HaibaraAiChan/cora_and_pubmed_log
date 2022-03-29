@@ -423,8 +423,8 @@ def main():
 		df.columns=column_names
 		print(df.to_markdown(tablefmt="grid"))
 
-		df_res=pd.DataFrame(res).transpose()
-		df_res.columns=column_names_csv
+		df_res=pd.DataFrame(res_full+res).transpose()
+		df_res.columns=column_names
 		df_res.index.name=file_in + ' '+ args.model
 		df_res.to_csv(args.save_path + "time_and_mem.csv")
 

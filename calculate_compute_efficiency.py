@@ -421,8 +421,8 @@ def cal_compute_eff_full_batch( file_in, model, path_1, path_2, args):
 
 
 
-				df_res=pd.DataFrame(res).transpose()
-				df_res.columns=column_names_csv
+				df_res=pd.DataFrame(res_full+res).transpose()
+				df_res.columns=column_names
 				df_res.index.name=file_in + ' '+ args.model
 				df_res.to_csv(args.save_path + "compute_efficiency.csv")
 
