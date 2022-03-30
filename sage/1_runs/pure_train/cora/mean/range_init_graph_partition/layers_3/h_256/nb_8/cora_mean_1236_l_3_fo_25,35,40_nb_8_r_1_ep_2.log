@@ -1,0 +1,1162 @@
+main start at this time 1648610197.684586
+-----------------------------------------before load data 
+ Nvidia-smi: 11.1502685546875 GB
+    Memory Allocated: 0.0  GigaBytes
+Max Memory Allocated: 0.0  GigaBytes
+
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+success----------------------------------------
+140
+500
+2068
+# Nodes: 2708
+# Edges: 10556
+# Train: 140
+# Val: 500
+# Test: 2068
+# Classes: 7
+
+in feats:  1433
+----------------------------------------before generate_dataloader_block 
+ Nvidia-smi: 12.0155029296875 GB
+    Memory Allocated: 0.0032434463500976562  GigaBytes
+Max Memory Allocated: 0.0032434463500976562  GigaBytes
+
+{'VmPeak': 20824.06640625, 'VmSize': 20812.3828125, 'VmHWM': 3623.12109375, 'VmRSS': 3623.12109375}
+The real block id is  2
+get_global_graph_edges_ids_block function  spend 0.0011608600616455078
+global_2_local 0.00011563301086425781
+---------------------------- variant graph partition start---------------------
+range_init for graph_partition spend:  6.008148193359375e-05
+before graph partition 
+		111, 90, 95, 86, 86, 143, 96, 51, 
+
+{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-
+
+-------------------------------------------------------------  compare batch pair  (0,1)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.000202178955078125
+	Initialize BitList time :  1.239776611328125e-05
+	getRedundancyCost: time   2.86102294921875e-06
+
+					length of partitions 111, 90
+
+	before terminate 1 the average redundancy rate is:  1.2484472049689441
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+Using backend: pytorch
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2484472049689441,  1.3788819875776397,  1.1180124223602483
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2484472049689441,  1.3788819875776397,  1.1180124223602483
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2484472049689441,  1.3788819875776397,  1.1180124223602483
+	walk terminate 1 spend time 4.743647575378418
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		90, 111, 95, 86, 86, 143, 96, 51, 
+
+
+	--------------------------------------------------end of batch 0
+-------------------------------------------------------------  compare batch pair  (1,2)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.00042891502380371094
+	Initialize BitList time :  3.2901763916015625e-05
+	getRedundancyCost: time   3.0994415283203125e-06
+
+					length of partitions 111, 95
+
+	before terminate 1 the average redundancy rate is:  1.279503105590062
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 redundancy will reduce  0.012422360248447228
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2670807453416149,  1.1677018633540373,  1.3664596273291925
+						 current side  1
+			 redundancy will reduce  0.012422360248447006
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.267080745341615,  1.3416149068322982,  1.1925465838509317
+						 current side  0
+			 redundancy will reduce  0.012422360248447006
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.267080745341615,  1.1925465838509317,  1.3416149068322982
+	walk terminate 1 spend time 4.647198438644409
+				 improvement:  True
+	 walk terminate 1 start-------
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.267080745341615,  1.1925465838509317,  1.3416149068322982
+						 current side  0
+			 redundancy will reduce  0.012422360248447228
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :1  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2670807453416149,  1.0186335403726707,  1.515527950310559
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2670807453416149,  1.0186335403726707,  1.515527950310559
+	walk terminate 1 spend time 4.500018119812012
+				 improvement:  True
+0
+side is 1
+	 walk step 1  partition 
+		90, 82, 122, 86, 86, 143, 96, 51, 
+
+
+	--------------------------------------------------end of batch 1
+-------------------------------------------------------------  compare batch pair  (2,3)
+				 list len:
+				18, 12, 24, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0004818439483642578
+	Initialize BitList time :  4.363059997558594e-05
+	getRedundancyCost: time   3.814697265625e-06
+
+					length of partitions 122, 86
+
+	before terminate 1 the average redundancy rate is:  1.2919254658385093
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2919254658385093,  1.515527950310559,  1.0683229813664596
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2919254658385093,  1.515527950310559,  1.0683229813664596
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2919254658385093,  1.515527950310559,  1.0683229813664596
+	walk terminate 1 spend time 4.561718702316284
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		90, 82, 86, 122, 86, 143, 96, 51, 
+
+
+	--------------------------------------------------end of batch 2
+-------------------------------------------------------------  compare batch pair  (3,4)
+				 list len:
+				18, 12, 18, 24, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0006794929504394531
+	Initialize BitList time :  9.202957153320312e-05
+	getRedundancyCost: time   3.5762786865234375e-06
+
+					length of partitions 122, 86
+
+	before terminate 1 the average redundancy rate is:  1.2919254658385093
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2919254658385093,  1.515527950310559,  1.0683229813664596
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2919254658385093,  1.515527950310559,  1.0683229813664596
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2919254658385093,  1.515527950310559,  1.0683229813664596
+	walk terminate 1 spend time 4.4148783683776855
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		90, 82, 86, 86, 122, 143, 96, 51, 
+
+
+	--------------------------------------------------end of batch 3
+-------------------------------------------------------------  compare batch pair  (4,5)
+				 list len:
+				18, 12, 18, 18, 24, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0004906654357910156
+	Initialize BitList time :  4.172325134277344e-05
+	getRedundancyCost: time   4.291534423828125e-06
+
+					length of partitions 122, 143
+
+	before terminate 1 the average redundancy rate is:  1.6459627329192545
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  1
+			 redundancy will reduce  0.006211180124223503
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :0  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.639751552795031,  2.111801242236025,  1.1677018633540373
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.639751552795031,  2.111801242236025,  1.1677018633540373
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.639751552795031,  2.111801242236025,  1.1677018633540373
+	walk terminate 1 spend time 4.759683609008789
+				 improvement:  True
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 1
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.639751552795031,  2.0745341614906834,  1.204968944099379
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.639751552795031,  2.0745341614906834,  1.204968944099379
+						 current side  0
+			 the number of node to move is : 1
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.6521739130434783,  1.9751552795031055,  1.329192546583851
+	walk terminate 1 spend time 4.626896619796753
+				 improvement:  True
+1
+side is 0
+	 walk step 1  partition 
+		90, 82, 86, 86, 107, 159, 96, 51, 
+
+
+	--------------------------------------------------end of batch 4
+-------------------------------------------------------------  compare batch pair  (5,6)
+				 list len:
+				18, 12, 18, 18, 17, 25, 18, 14, 
+
+
+	preparing two sides time :  0.00037980079650878906
+	Initialize BitList time :  3.504753112792969e-05
+	getRedundancyCost: time   2.86102294921875e-06
+
+					length of partitions 159, 96
+
+	before terminate 1 the average redundancy rate is:  1.5838509316770186
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 1
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5838509316770186,  1.9254658385093169,  1.2422360248447204
+						 current side  1
+			 redundancy will reduce  0.03105590062111796
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5527950310559007,  2.062111801242236,  1.0434782608695652
+						 current side  0
+			 redundancy will reduce  0.03105590062111796
+			 the number of node to move is : 4
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5527950310559007,  1.875776397515528,  1.2298136645962734
+	walk terminate 1 spend time 4.605693817138672
+				 improvement:  True
+	 walk terminate 1 start-------
+						 current side  0
+			 redundancy will reduce  0.037267080745341685
+			 the number of node to move is : 4
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.546583850931677,  1.4782608695652173,  1.6149068322981366
+						 current side  1
+			 redundancy will reduce  0.03726708074534146
+			 the number of node to move is : 4
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5465838509316772,  1.6770186335403727,  1.4161490683229814
+						 current side  0
+			 redundancy will reduce  0.03105590062111796
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5527950310559007,  1.5527950310559007,  1.5527950310559007
+	walk terminate 1 spend time 4.511683702468872
+				 improvement:  True
+1
+side is 1
+	 walk step 1  partition 
+		90, 82, 86, 86, 107, 125, 125, 51, 
+
+
+	--------------------------------------------------end of batch 5
+-------------------------------------------------------------  compare batch pair  (6,7)
+				 list len:
+				18, 12, 18, 18, 17, 20, 23, 14, 
+
+
+	preparing two sides time :  0.0004382133483886719
+	Initialize BitList time :  0.000118255615234375
+	getRedundancyCost: time   3.0994415283203125e-06
+
+					length of partitions 125, 51
+
+	before terminate 1 the average redundancy rate is:  1.093167701863354
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.093167701863354,  1.5527950310559007,  0.6335403726708074
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.093167701863354,  1.5527950310559007,  0.6335403726708074
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.093167701863354,  1.5527950310559007,  0.6335403726708074
+	walk terminate 1 spend time 4.808276414871216
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		90, 82, 86, 86, 107, 125, 51, 125, 
+
+
+	--------------------------------------------------end of batch 6
+after graph partition
+graph partition algorithm spend time 46.20524621009827
+partition_len_list
+[90, 82, 86, 86, 107, 125, 51, 125]
+range_init_graph_partition selection method range initialization spend 46.20586037635803
+time for parepare:  0.00018405914306640625
+local_output_nid generation:  6.198883056640625e-06
+local_in_edges_tensor generation:  0.00107574462890625
+mini_batch_src_global generation:  0.0002071857452392578
+r_  generation:  0.01357889175415039
+local_output_nid generation:  3.5762786865234375e-06
+local_in_edges_tensor generation:  0.0002129077911376953
+mini_batch_src_global generation:  3.719329833984375e-05
+r_  generation:  5.340576171875e-05
+local_output_nid generation:  2.86102294921875e-06
+local_in_edges_tensor generation:  0.00010848045349121094
+mini_batch_src_global generation:  1.7642974853515625e-05
+r_  generation:  6.532669067382812e-05
+local_output_nid generation:  2.86102294921875e-06
+local_in_edges_tensor generation:  0.00010275840759277344
+mini_batch_src_global generation:  1.7881393432617188e-05
+r_  generation:  5.030632019042969e-05
+local_output_nid generation:  2.6226043701171875e-06
+local_in_edges_tensor generation:  0.00010275840759277344
+mini_batch_src_global generation:  1.8358230590820312e-05
+r_  generation:  6.842613220214844e-05
+local_output_nid generation:  3.0994415283203125e-06
+local_in_edges_tensor generation:  0.00010371208190917969
+mini_batch_src_global generation:  1.8835067749023438e-05
+r_  generation:  7.915496826171875e-05
+local_output_nid generation:  2.1457672119140625e-06
+local_in_edges_tensor generation:  0.00010323524475097656
+mini_batch_src_global generation:  1.6927719116210938e-05
+r_  generation:  4.291534423828125e-05
+local_output_nid generation:  3.814697265625e-06
+local_in_edges_tensor generation:  0.00011682510375976562
+mini_batch_src_global generation:  1.9073486328125e-05
+r_  generation:  4.744529724121094e-05
+----------------------check_connections_block total spend ----------------------------- 0.017737388610839844
+generate_one_block  0.01295614242553711
+generate_one_block  0.0011279582977294922
+generate_one_block  0.0010426044464111328
+generate_one_block  0.0010547637939453125
+generate_one_block  0.0010554790496826172
+generate_one_block  0.0010647773742675781
+generate_one_block  0.0010328292846679688
+generate_one_block  0.0010766983032226562
+The real block id is  1
+get_global_graph_edges_ids_block function  spend 0.001983165740966797
+gen group dst list time:  0.000125885009765625
+time for parepare:  0.0006253719329833984
+local_output_nid generation:  2.3365020751953125e-05
+local_in_edges_tensor generation:  0.0005002021789550781
+mini_batch_src_global generation:  4.887580871582031e-05
+r_  generation:  0.000308990478515625
+local_output_nid generation:  7.867813110351562e-06
+local_in_edges_tensor generation:  0.00012612342834472656
+mini_batch_src_global generation:  4.363059997558594e-05
+r_  generation:  0.0001990795135498047
+local_output_nid generation:  8.58306884765625e-06
+local_in_edges_tensor generation:  0.00012230873107910156
+mini_batch_src_global generation:  3.457069396972656e-05
+r_  generation:  0.00025844573974609375
+local_output_nid generation:  8.344650268554688e-06
+local_in_edges_tensor generation:  0.00012087821960449219
+mini_batch_src_global generation:  3.337860107421875e-05
+r_  generation:  0.00022220611572265625
+local_output_nid generation:  1.0728836059570312e-05
+local_in_edges_tensor generation:  0.000152587890625
+mini_batch_src_global generation:  5.3882598876953125e-05
+r_  generation:  0.0003380775451660156
+local_output_nid generation:  1.1444091796875e-05
+local_in_edges_tensor generation:  0.00012946128845214844
+mini_batch_src_global generation:  3.838539123535156e-05
+r_  generation:  0.0002677440643310547
+local_output_nid generation:  5.4836273193359375e-06
+local_in_edges_tensor generation:  0.00012087821960449219
+mini_batch_src_global generation:  3.218650817871094e-05
+r_  generation:  0.0001518726348876953
+local_output_nid generation:  1.1920928955078125e-05
+local_in_edges_tensor generation:  0.00012564659118652344
+mini_batch_src_global generation:  3.790855407714844e-05
+r_  generation:  0.0003199577331542969
+----------------------check_connections_block total spend ----------------------------- 0.005275726318359375
+generate_one_block  0.0013873577117919922
+generate_one_block  0.0012450218200683594
+generate_one_block  0.001332998275756836
+generate_one_block  0.0012388229370117188
+generate_one_block  0.0015630722045898438
+generate_one_block  0.0013763904571533203
+generate_one_block  0.001192331314086914
+generate_one_block  0.0016074180603027344
+The real block id is  0
+get_global_graph_edges_ids_block function  spend 0.0015060901641845703
+gen group dst list time:  9.799003601074219e-05
+time for parepare:  0.0004968643188476562
+local_output_nid generation:  4.482269287109375e-05
+local_in_edges_tensor generation:  0.0008058547973632812
+mini_batch_src_global generation:  0.0003578662872314453
+r_  generation:  0.0008218288421630859
+local_output_nid generation:  2.7418136596679688e-05
+local_in_edges_tensor generation:  0.000335693359375
+mini_batch_src_global generation:  0.0001380443572998047
+r_  generation:  0.0006034374237060547
+local_output_nid generation:  3.24249267578125e-05
+local_in_edges_tensor generation:  0.00022149085998535156
+mini_batch_src_global generation:  0.00012755393981933594
+r_  generation:  0.0007445812225341797
+local_output_nid generation:  3.0517578125e-05
+local_in_edges_tensor generation:  0.00016808509826660156
+mini_batch_src_global generation:  8.058547973632812e-05
+r_  generation:  0.000640869140625
+local_output_nid generation:  3.838539123535156e-05
+local_in_edges_tensor generation:  0.00021719932556152344
+mini_batch_src_global generation:  0.00015306472778320312
+r_  generation:  0.0008459091186523438
+local_output_nid generation:  3.0279159545898438e-05
+local_in_edges_tensor generation:  0.00016570091247558594
+mini_batch_src_global generation:  8.153915405273438e-05
+r_  generation:  0.0007092952728271484
+local_output_nid generation:  2.86102294921875e-05
+local_in_edges_tensor generation:  0.0001628398895263672
+mini_batch_src_global generation:  7.581710815429688e-05
+r_  generation:  0.0005769729614257812
+local_output_nid generation:  4.00543212890625e-05
+local_in_edges_tensor generation:  0.00019478797912597656
+mini_batch_src_global generation:  0.00016832351684570312
+r_  generation:  0.0009415149688720703
+----------------------check_connections_block total spend ----------------------------- 0.012756109237670898
+generate_one_block  0.002110719680786133
+generate_one_block  0.0017094612121582031
+generate_one_block  0.0019402503967285156
+generate_one_block  0.0018291473388671875
+generate_one_block  0.002134561538696289
+generate_one_block  0.0017876625061035156
+generate_one_block  0.0017313957214355469
+generate_one_block  0.002666473388671875
+-----------------------------------------after block dataloader generation 
+ Nvidia-smi: 12.0155029296875 GB
+    Memory Allocated: 0.0032434463500976562  GigaBytes
+Max Memory Allocated: 0.0032434463500976562  GigaBytes
+
+{'VmPeak': 20824.06640625, 'VmSize': 20660.23046875, 'VmHWM': 3623.9921875, 'VmRSS': 3623.9921875}
+connection checking time:  0.018031835556030273
+block generation total time  0.026853084564208984
+average batch blocks generation time:  0.003356635570526123
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.0799560546875 GB
+    Memory Allocated: 0.009494304656982422  GigaBytes
+Max Memory Allocated: 0.009494304656982422  GigaBytes
+
+{'VmPeak': 21006.91796875, 'VmSize': 20977.80859375, 'VmHWM': 3911.76171875, 'VmRSS': 3911.76171875}
+torch.Size([1166, 1433])
+torch.Size([449, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2420654296875 GB
+    Memory Allocated: 0.011287212371826172  GigaBytes
+Max Memory Allocated: 0.011913776397705078  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21749.52734375, 'VmHWM': 4605.62890625, 'VmRSS': 4605.62890625}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.010955333709716797  GigaBytes
+Max Memory Allocated: 0.01716136932373047  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21754.13671875, 'VmHWM': 4609.6328125, 'VmRSS': 4609.6328125}
+torch.Size([834, 1433])
+torch.Size([333, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.012348175048828125  GigaBytes
+Max Memory Allocated: 0.01716136932373047  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21754.13671875, 'VmHWM': 4609.8828125, 'VmRSS': 4609.8828125}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.011513710021972656  GigaBytes
+Max Memory Allocated: 0.01716136932373047  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21754.703125, 'VmHWM': 4611.98046875, 'VmRSS': 4611.98046875}
+torch.Size([938, 1433])
+torch.Size([387, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.013093948364257812  GigaBytes
+Max Memory Allocated: 0.01716136932373047  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21754.703125, 'VmHWM': 4611.98046875, 'VmRSS': 4611.98046875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.011905670166015625  GigaBytes
+Max Memory Allocated: 0.01716136932373047  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.109375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+torch.Size([1012, 1433])
+torch.Size([346, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.013354778289794922  GigaBytes
+Max Memory Allocated: 0.01716136932373047  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.109375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.012735366821289062  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.2734375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+torch.Size([1042, 1433])
+torch.Size([495, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.014740467071533203  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.2734375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.011647224426269531  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.2734375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+torch.Size([963, 1433])
+torch.Size([370, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.013332843780517578  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.2734375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.011275291442871094  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.2734375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+torch.Size([894, 1433])
+torch.Size([326, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2459716796875 GB
+    Memory Allocated: 0.012519359588623047  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21755.2734375, 'VmHWM': 4612.98046875, 'VmRSS': 4612.98046875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2655029296875 GB
+    Memory Allocated: 0.013249874114990234  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21756.4765625, 'VmHWM': 4613.9921875, 'VmRSS': 4613.9921875}
+torch.Size([1262, 1433])
+torch.Size([539, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2655029296875 GB
+    Memory Allocated: 0.015468120574951172  GigaBytes
+Max Memory Allocated: 0.018111705780029297  GigaBytes
+
+{'VmPeak': 21759.92578125, 'VmSize': 21756.4765625, 'VmHWM': 4613.9921875, 'VmRSS': 4613.9921875}
+{'VmPeak': 21820.47265625, 'VmSize': 21788.4765625, 'VmHWM': 4614.4921875, 'VmRSS': 4614.4921875}
+times | data loading | block to device | model prediction | loss calculation | loss backward |  optimizer step |
+      |0.01166391372680664 |0.04658842086791992 |0.10084348917007446 |0.00014203786849975586 |0.003323286771774292 |0.0019812583923339844 |
+----------------------------------------------------------pseudo_mini_loss sum 4.012709140777588
+{'VmPeak': 21820.47265625, 'VmSize': 21788.4765625, 'VmHWM': 4614.4921875, 'VmRSS': 4614.4921875}
+ Run 0| Epoch 0 |
+Number of nodes for computation during this epoch:  12108
+Number of first layer input nodes during this epoch:  8111
+----------------------------------------before generate_dataloader_block 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.0205535888671875  GigaBytes
+Max Memory Allocated: 0.026020526885986328  GigaBytes
+
+{'VmPeak': 21820.47265625, 'VmSize': 21788.4765625, 'VmHWM': 4614.4921875, 'VmRSS': 4614.4921875}
+The real block id is  2
+get_global_graph_edges_ids_block function  spend 0.0004818439483642578
+global_2_local 7.772445678710938e-05
+---------------------------- variant graph partition start---------------------
+range_init for graph_partition spend:  5.316734313964844e-05
+before graph partition 
+		135, 89, 110, 85, 91, 69, 118, 58, 
+
+{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-
+
+-------------------------------------------------------------  compare batch pair  (0,1)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.00021266937255859375
+	Initialize BitList time :  1.2159347534179688e-05
+	getRedundancyCost: time   2.384185791015625e-06
+
+					length of partitions 135, 89
+
+	before terminate 1 the average redundancy rate is:  1.391304347826087
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.391304347826087,  1.6770186335403727,  1.1055900621118013
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.391304347826087,  1.6770186335403727,  1.1055900621118013
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.391304347826087,  1.6770186335403727,  1.1055900621118013
+	walk terminate 1 spend time 5.246149301528931
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		89, 135, 110, 85, 91, 69, 118, 58, 
+
+
+	--------------------------------------------------end of batch 0
+-------------------------------------------------------------  compare batch pair  (1,2)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0004677772521972656
+	Initialize BitList time :  3.4332275390625e-05
+	getRedundancyCost: time   3.337860107421875e-06
+
+					length of partitions 135, 110
+
+	before terminate 1 the average redundancy rate is:  1.5217391304347827
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5217391304347827,  1.6770186335403727,  1.3664596273291925
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5217391304347827,  1.6770186335403727,  1.3664596273291925
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5217391304347827,  1.6770186335403727,  1.3664596273291925
+	walk terminate 1 spend time 5.479449033737183
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		89, 110, 135, 85, 91, 69, 118, 58, 
+
+
+	--------------------------------------------------end of batch 1
+-------------------------------------------------------------  compare batch pair  (2,3)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0004677772521972656
+	Initialize BitList time :  3.743171691894531e-05
+	getRedundancyCost: time   3.5762786865234375e-06
+
+					length of partitions 135, 85
+
+	before terminate 1 the average redundancy rate is:  1.3664596273291925
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.3664596273291925,  1.6770186335403727,  1.0559006211180124
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.3664596273291925,  1.6770186335403727,  1.0559006211180124
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.3664596273291925,  1.6770186335403727,  1.0559006211180124
+	walk terminate 1 spend time 5.418610095977783
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		89, 110, 85, 135, 91, 69, 118, 58, 
+
+
+	--------------------------------------------------end of batch 2
+-------------------------------------------------------------  compare batch pair  (3,4)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.00047659873962402344
+	Initialize BitList time :  3.933906555175781e-05
+	getRedundancyCost: time   3.337860107421875e-06
+
+					length of partitions 135, 91
+
+	before terminate 1 the average redundancy rate is:  1.4037267080745341
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.4037267080745341,  1.6770186335403727,  1.1304347826086956
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.4037267080745341,  1.6770186335403727,  1.1304347826086956
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.4037267080745341,  1.6770186335403727,  1.1304347826086956
+	walk terminate 1 spend time 5.4999098777771
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		89, 110, 85, 91, 135, 69, 118, 58, 
+
+
+	--------------------------------------------------end of batch 3
+-------------------------------------------------------------  compare batch pair  (4,5)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0004620552062988281
+	Initialize BitList time :  3.886222839355469e-05
+	getRedundancyCost: time   3.5762786865234375e-06
+
+					length of partitions 135, 69
+
+	before terminate 1 the average redundancy rate is:  1.2670807453416149
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2670807453416149,  1.6770186335403727,  0.8571428571428571
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2670807453416149,  1.6770186335403727,  0.8571428571428571
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.2670807453416149,  1.6770186335403727,  0.8571428571428571
+	walk terminate 1 spend time 5.450537443161011
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		89, 110, 85, 91, 69, 135, 118, 58, 
+
+
+	--------------------------------------------------end of batch 4
+-------------------------------------------------------------  compare batch pair  (5,6)
+				 list len:
+				18, 18, 18, 18, 18, 18, 18, 14, 
+
+
+	preparing two sides time :  0.0004074573516845703
+	Initialize BitList time :  9.250640869140625e-05
+	getRedundancyCost: time   3.337860107421875e-06
+
+					length of partitions 135, 118
+
+	before terminate 1 the average redundancy rate is:  1.5714285714285716
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5714285714285716,  1.6770186335403727,  1.4658385093167703
+						 current side  1
+			 redundancy will reduce  2.220446049250313e-16
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5714285714285714,  1.9006211180124224,  1.2422360248447204
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5714285714285714,  1.9006211180124224,  1.2422360248447204
+	walk terminate 1 spend time 5.355731248855591
+				 improvement:  True
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.5714285714285714,  1.9006211180124224,  1.2422360248447204
+						 current side  1
+			 redundancy will reduce  0.006211180124223725
+			 the number of node to move is : 3
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.565217391304348,  2.0745341614906834,  1.0559006211180124
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.565217391304348,  2.0745341614906834,  1.0559006211180124
+	walk terminate 1 spend time 5.3812713623046875
+				 improvement:  True
+1
+side is 0
+	 walk step 1  partition 
+		89, 110, 85, 91, 69, 85, 167, 58, 
+
+
+	--------------------------------------------------end of batch 5
+-------------------------------------------------------------  compare batch pair  (6,7)
+				 list len:
+				18, 18, 18, 18, 18, 12, 24, 14, 
+
+
+	preparing two sides time :  0.0004792213439941406
+	Initialize BitList time :  4.38690185546875e-05
+	getRedundancyCost: time   3.5762786865234375e-06
+
+					length of partitions 167, 58
+
+	before terminate 1 the average redundancy rate is:  1.3975155279503106
+	--------------------------------------------------------------------------------
+	 walk terminate 1 start-------
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :0  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.3975155279503106,  2.0745341614906834,  0.7204968944099379
+						 current side  1
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :1  side 1
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.3975155279503106,  2.0745341614906834,  0.7204968944099379
+						 current side  0
+			 the number of node to move is : 0
+			 --group redundancy rate update  step :2  side 0
+			 redundancy rate (ration_mean, ratio_A, ratio_B): 1.3975155279503106,  2.0745341614906834,  0.7204968944099379
+	walk terminate 1 spend time 5.544694423675537
+				 improvement:  False
+1
+side is 0
+	 walk step 0  partition 
+		89, 110, 85, 91, 69, 85, 58, 167, 
+
+
+	--------------------------------------------------end of batch 6
+after graph partition
+graph partition algorithm spend time 43.40231156349182
+partition_len_list
+[89, 110, 85, 91, 69, 85, 58, 167]
+range_init_graph_partition selection method range initialization spend 43.40280628204346
+time for parepare:  0.0001804828643798828
+local_output_nid generation:  5.7220458984375e-06
+local_in_edges_tensor generation:  0.0010483264923095703
+mini_batch_src_global generation:  9.965896606445312e-05
+r_  generation:  0.0004413127899169922
+local_output_nid generation:  6.9141387939453125e-06
+local_in_edges_tensor generation:  0.00025200843811035156
+mini_batch_src_global generation:  4.1484832763671875e-05
+r_  generation:  0.00010895729064941406
+local_output_nid generation:  6.9141387939453125e-06
+local_in_edges_tensor generation:  0.00022840499877929688
+mini_batch_src_global generation:  3.743171691894531e-05
+r_  generation:  9.894371032714844e-05
+local_output_nid generation:  5.9604644775390625e-06
+local_in_edges_tensor generation:  0.00022602081298828125
+mini_batch_src_global generation:  3.62396240234375e-05
+r_  generation:  8.0108642578125e-05
+local_output_nid generation:  5.7220458984375e-06
+local_in_edges_tensor generation:  0.0002200603485107422
+mini_batch_src_global generation:  3.457069396972656e-05
+r_  generation:  7.295608520507812e-05
+local_output_nid generation:  4.76837158203125e-06
+local_in_edges_tensor generation:  0.0002601146697998047
+mini_batch_src_global generation:  3.790855407714844e-05
+r_  generation:  9.608268737792969e-05
+local_output_nid generation:  5.0067901611328125e-06
+local_in_edges_tensor generation:  0.00022029876708984375
+mini_batch_src_global generation:  3.361701965332031e-05
+r_  generation:  6.4849853515625e-05
+local_output_nid generation:  2.7418136596679688e-05
+local_in_edges_tensor generation:  0.00021982192993164062
+mini_batch_src_global generation:  4.267692565917969e-05
+r_  generation:  0.00012445449829101562
+----------------------check_connections_block total spend ----------------------------- 0.00565028190612793
+generate_one_block  0.020648956298828125
+generate_one_block  0.0012669563293457031
+generate_one_block  0.0013501644134521484
+generate_one_block  0.0011332035064697266
+generate_one_block  0.0011126995086669922
+generate_one_block  0.0011124610900878906
+generate_one_block  0.001087188720703125
+generate_one_block  0.0011715888977050781
+The real block id is  1
+get_global_graph_edges_ids_block function  spend 0.0012357234954833984
+gen group dst list time:  7.62939453125e-05
+time for parepare:  0.0006506443023681641
+local_output_nid generation:  3.2901763916015625e-05
+local_in_edges_tensor generation:  0.040534257888793945
+mini_batch_src_global generation:  0.00027060508728027344
+r_  generation:  0.0002684593200683594
+local_output_nid generation:  1.2636184692382812e-05
+local_in_edges_tensor generation:  0.0001926422119140625
+mini_batch_src_global generation:  0.014938831329345703
+r_  generation:  0.0004601478576660156
+local_output_nid generation:  1.239776611328125e-05
+local_in_edges_tensor generation:  0.0001900196075439453
+mini_batch_src_global generation:  5.364418029785156e-05
+r_  generation:  0.0003387928009033203
+local_output_nid generation:  1.1682510375976562e-05
+local_in_edges_tensor generation:  0.00017118453979492188
+mini_batch_src_global generation:  4.792213439941406e-05
+r_  generation:  0.0003077983856201172
+local_output_nid generation:  9.5367431640625e-06
+local_in_edges_tensor generation:  0.00015926361083984375
+mini_batch_src_global generation:  4.363059997558594e-05
+r_  generation:  0.0002429485321044922
+local_output_nid generation:  1.2159347534179688e-05
+local_in_edges_tensor generation:  0.00016307830810546875
+mini_batch_src_global generation:  4.363059997558594e-05
+r_  generation:  0.0002739429473876953
+local_output_nid generation:  8.344650268554688e-06
+local_in_edges_tensor generation:  0.00015616416931152344
+mini_batch_src_global generation:  4.00543212890625e-05
+r_  generation:  0.00020456314086914062
+local_output_nid generation:  2.002716064453125e-05
+local_in_edges_tensor generation:  0.00018715858459472656
+mini_batch_src_global generation:  8.606910705566406e-05
+r_  generation:  0.0005908012390136719
+----------------------check_connections_block total spend ----------------------------- 0.061872243881225586
+generate_one_block  0.0017809867858886719
+generate_one_block  0.001847982406616211
+generate_one_block  0.0014908313751220703
+generate_one_block  0.001523733139038086
+generate_one_block  0.0014986991882324219
+generate_one_block  0.0014941692352294922
+generate_one_block  0.0014445781707763672
+generate_one_block  0.0019173622131347656
+The real block id is  0
+get_global_graph_edges_ids_block function  spend 0.02101922035217285
+gen group dst list time:  0.00019359588623046875
+time for parepare:  0.0005888938903808594
+local_output_nid generation:  4.649162292480469e-05
+local_in_edges_tensor generation:  0.10643911361694336
+mini_batch_src_global generation:  0.00027108192443847656
+r_  generation:  0.00081634521484375
+local_output_nid generation:  7.2479248046875e-05
+local_in_edges_tensor generation:  0.0004189014434814453
+mini_batch_src_global generation:  0.00013566017150878906
+r_  generation:  0.0008528232574462891
+local_output_nid generation:  4.839897155761719e-05
+local_in_edges_tensor generation:  0.00018334388732910156
+mini_batch_src_global generation:  8.58306884765625e-05
+r_  generation:  0.0007376670837402344
+local_output_nid generation:  4.410743713378906e-05
+local_in_edges_tensor generation:  0.0001780986785888672
+mini_batch_src_global generation:  8.535385131835938e-05
+r_  generation:  0.0007343292236328125
+local_output_nid generation:  3.552436828613281e-05
+local_in_edges_tensor generation:  0.0001583099365234375
+mini_batch_src_global generation:  7.82012939453125e-05
+r_  generation:  0.000579833984375
+local_output_nid generation:  3.0994415283203125e-05
+local_in_edges_tensor generation:  0.00015854835510253906
+mini_batch_src_global generation:  7.390975952148438e-05
+r_  generation:  0.0005843639373779297
+local_output_nid generation:  3.1948089599609375e-05
+local_in_edges_tensor generation:  0.00015091896057128906
+mini_batch_src_global generation:  6.771087646484375e-05
+r_  generation:  0.0005633831024169922
+local_output_nid generation:  5.173683166503906e-05
+local_in_edges_tensor generation:  0.0001990795135498047
+mini_batch_src_global generation:  0.00011682510375976562
+r_  generation:  0.0010809898376464844
+----------------------check_connections_block total spend ----------------------------- 0.11769461631774902
+generate_one_block  0.002988100051879883
+generate_one_block  0.003951072692871094
+generate_one_block  0.0018167495727539062
+generate_one_block  0.001898050308227539
+generate_one_block  0.0016856193542480469
+generate_one_block  0.0017070770263671875
+generate_one_block  0.002791166305541992
+generate_one_block  0.0026617050170898438
+-----------------------------------------after block dataloader generation 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.0205535888671875  GigaBytes
+Max Memory Allocated: 0.026020526885986328  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21852.4765625, 'VmHWM': 4615.390625, 'VmRSS': 4615.3671875}
+connection checking time:  0.1795668601989746
+block generation total time  0.03249788284301758
+average batch blocks generation time:  0.004062235355377197
+block dataloader generation time/epoch 43.68663024902344
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.019181251525878906  GigaBytes
+Max Memory Allocated: 0.026020526885986328  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21855.52734375, 'VmHWM': 4617.98828125, 'VmRSS': 4617.98828125}
+torch.Size([1019, 1433])
+torch.Size([388, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.02077627182006836  GigaBytes
+Max Memory Allocated: 0.026020526885986328  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21855.52734375, 'VmHWM': 4617.98828125, 'VmRSS': 4617.98828125}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.019913196563720703  GigaBytes
+Max Memory Allocated: 0.026020526885986328  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4618.8671875, 'VmRSS': 4618.8671875}
+torch.Size([1155, 1433])
+torch.Size([514, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.02199077606201172  GigaBytes
+Max Memory Allocated: 0.026020526885986328  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4618.87109375, 'VmRSS': 4618.87109375}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.020470619201660156  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4618.97265625, 'VmRSS': 4618.97265625}
+torch.Size([1083, 1433])
+torch.Size([400, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.022088050842285156  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4618.97265625, 'VmRSS': 4618.97265625}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.01921367645263672  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+torch.Size([1025, 1433])
+torch.Size([383, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.020801067352294922  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.018441200256347656  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+torch.Size([881, 1433])
+torch.Size([330, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.019771099090576172  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.018244266510009766  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+torch.Size([844, 1433])
+torch.Size([318, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.01960277557373047  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.01815176010131836  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+torch.Size([827, 1433])
+torch.Size([293, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.019321441650390625  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21856.2734375, 'VmHWM': 4619.16796875, 'VmRSS': 4619.16796875}
+----------------------------------------before batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2674560546875 GB
+    Memory Allocated: 0.02117633819580078  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21857.5546875, 'VmHWM': 4620.125, 'VmRSS': 4620.125}
+torch.Size([1390, 1433])
+torch.Size([654, 256])
+-----------------------------------------batch_pred = model(blocks, batch_inputs) 
+ Nvidia-smi: 12.2655029296875 GB
+    Memory Allocated: 0.02393054962158203  GigaBytes
+Max Memory Allocated: 0.02661418914794922  GigaBytes
+
+{'VmPeak': 21916.4921875, 'VmSize': 21857.5546875, 'VmHWM': 4620.12890625, 'VmRSS': 4620.12890625}
+{'VmPeak': 21916.4921875, 'VmSize': 21857.5546875, 'VmHWM': 4620.12890625, 'VmRSS': 4620.12890625}
+times | data loading | block to device | model prediction | loss calculation | loss backward |  optimizer step |
+      |0.0035106539726257324 |0.000467449426651001 |0.003603339195251465 |0.00014072656631469727 |0.0036752820014953613 |0.0016334056854248047 |
+----------------------------------------------------------pseudo_mini_loss sum 0.742148756980896
+{'VmPeak': 21916.4921875, 'VmSize': 21857.5546875, 'VmHWM': 4620.12890625, 'VmRSS': 4620.12890625}
+Total (block generation + training)time/epoch 43.79063868522644
+Training time/epoch 0.10350561141967773
+Training time without block to device /epoch 0.09976601600646973
+Training time without total dataloading part /epoch 0.06098818778991699
+load block tensor time/epoch 0.02808523178100586
+block to device time/epoch 0.003739595413208008
+input features size transfer per epoch 1.0728836059570312e-06
+blocks size to device per epoch 7.152557373046875e-07
+ Run 0| Epoch 1 |
+Number of nodes for computation during this epoch:  12258
+Number of first layer input nodes during this epoch:  8224
